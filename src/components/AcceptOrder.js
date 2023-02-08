@@ -69,7 +69,7 @@ export default function AcceptOrder() {
         <div>
             <div className='container'>
                 <div className='row'>
-                    <div className="col-md-10 col-xl-10 col-sm-10  m-auto mb-4">
+                    <div className="col-md-6 col-xl-6 col-sm-6 m-auto mb-4">
                         <div className="card">
                             <div className="card-body">
                                 <form >

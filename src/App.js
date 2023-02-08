@@ -40,7 +40,7 @@ export default function App() {
       </Route>
       <Route path="/index-driver" element={<ProtectedRoute><DriverIndexPage /></ProtectedRoute>} >
         <Route index element={<ProtectedRoute><BookingsPage /></ProtectedRoute>} />
-        <Route path="accept-order" element={<ProtectedRoute><AcceptOrder /></ProtectedRoute>}/>
+        <Route path="accept-order" element={<ProtectedRoute><AcceptOrder /></ProtectedRoute>} />
         <Route path="editprofile" element={<ProtectedRoute><EditProfile /></ProtectedRoute>} />
         <Route path="profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
       </Route>

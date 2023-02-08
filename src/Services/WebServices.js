@@ -1,7 +1,5 @@
 import axios from 'axios'
-import Token from '../Token';
 class WebService{
-    
     static getApi(url,data){
         
         return axios.get(url,data)

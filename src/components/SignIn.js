@@ -18,6 +18,7 @@ export default function SignIn() {
             email: email,
             password: password,
         }
+        console.log(email+" "+password)
         try {
             let response = await WebService.postApi(WebApi.USER_SIGNIN, { ...detail })
             if (response.data.status) {

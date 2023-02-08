@@ -32,8 +32,8 @@ export default function BookingsPage() {
             let response = await WebService.getApi(WebApi.BOOKING_VEHICLE);
             if (response.data.status) {
 
-                setBooking(response.data.bookings);
-                dispatch(setBookings(response.data.bookings))
+                setBooking(response.data.bookings.filter(data=>data.biding.filter(element=>element.driverId==user._id).length==0));
+                dispatch(setBookings(response.data.bookings.filter(data=>data.biding.filter(element=>element.driverId==user._id).length==0)))
             }
         }
         catch (err) {
@@ -46,7 +46,6 @@ export default function BookingsPage() {
     }
     return (
         <div>
-            {/* <ToastContainer /> */}
             <div className="col-md-12 col-xl-12 mt-4 mb-4">
                 <div className="card">
                     <div className="card-body">
@@ -61,7 +60,6 @@ export default function BookingsPage() {
                             </thead>
                             <tbody>
                                 {bookingCopy
-                                    // .filter(data=>data.biding.filter(element=>element.driverId==user._id).length==0)
                                     .map((book, index) => <tr >
                                         <td>{index + 1}</td>
                                         <td>{book.userId.name}</td>

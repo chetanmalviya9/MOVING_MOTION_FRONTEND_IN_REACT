@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { toast, ToastContainer } from 'react-toastify';
+import { setMessage } from '../reduxconfig/UserSlice';
 import WebApi from '../Services/WebApi';
 import WebService from '../Services/WebServices';
 export default function BookingForm() {
+    const dispatch = useDispatch();
     useEffect(() => {
         message && toast.success(message);
+            dispatch(setMessage(""));
     }, [])
     const { user, message } = useSelector(state => state.user.value)
     const [pickUpLocation, setPickUpLocation] = useState();
@@ -45,7 +48,7 @@ export default function BookingForm() {
     }
     return (
         <div>
-            <ToastContainer />
+            {/* <ToastContainer /> */}
             
       <div className="col-md-10 col-xl-10 col-sm-10  m-auto mb-4">
             <div className="card">
@@ -75,7 +78,7 @@ export default function BookingForm() {
                             <label htmlFor="form2">Pick-up Date</label>
                             <input type="date" min={minimumDate} onChange={(e) => setPickUpDate(e.target.value)} className="form-control" />
                         </div>
-                        <div className="md-form mt-3">
+                        <div className="mt-3">
                             <button disabled={!pickUpContact || !pickUpDate || !pickUpLocation || !deliveryLocation || !destinationContact} className="btn btn-success btn-block">Proceed</button>
                             <hr />
                         </div>
