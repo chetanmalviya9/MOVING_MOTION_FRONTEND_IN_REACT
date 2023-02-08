@@ -40,7 +40,7 @@ export default function SignUp() {
     }
     return (
         <div>
-            
+
             <section className="h-100 h-custom" style={{ backgroundImage: "url(/images/transport1.jpg)", backgroundSize: "cover" }}>
                 <div className="container pb-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -50,7 +50,7 @@ export default function SignUp() {
                                     className="w-100" style={{ borderTopLeftRadius: ".3rem", borderTopRightRadius: ".3rem" }}
                                     alt="Samplephoto" />
                                 <div className="card-body p-4">
-                                    <h3 className="mb-4 pb-2 pb-md-0 text-center px-md-2">Registration Info</h3>
+                                    <h3 className="mb-3 pb-2 pb-md-0 text-center px-md-2">Sign-Up</h3>
                                     <ToastContainer />
                                     <form onSubmit={signUp} className="px-md-2 col-md-8 m-auto">
                                         <div className="row mb-4">
@@ -86,9 +86,9 @@ export default function SignUp() {
 
                                         </div>
 
-
-                                        <button type="submit" className="btn btn-success mb-2">Submit</button>
-
+                                        <div className='text-center'>
+                                            <button type="submit" className="btn btn-success mb-2">Sign-up</button>
+                                        </div>
                                     </form>
 
                                 </div>

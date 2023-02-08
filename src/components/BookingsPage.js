@@ -15,7 +15,7 @@ export default function BookingsPage() {
     const [orderId, setOrderId] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [postPerPage] = useState(5);
-  
+
     const { user } = useSelector(state => state.user.value);
     const { attachDetail } = useSelector(state => state.attach.value);
     const navigate = useNavigate();
@@ -40,11 +40,11 @@ export default function BookingsPage() {
             console.log(err);
         }
     }
-    const acceptOrder=(e)=>{
+    const acceptOrder = (e) => {
         console.log(e.target.value);
-        navigate("/index-driver/accept-order",{state:{orderId:e.target.value}});
+        navigate("/index-driver/accept-order", { state: { orderId: e.target.value } });
     }
-        return (
+    return (
         <div>
             {/* <ToastContainer /> */}
             <div className="col-md-12 col-xl-12 mt-4 mb-4">
@@ -61,19 +61,19 @@ export default function BookingsPage() {
                             </thead>
                             <tbody>
                                 {bookingCopy
-                                // .filter(data=>data.biding.filter(element=>element.driverId==user._id).length==0)
-                                .map((book, index) => <tr >
-                                    <td>{index + 1}</td>
-                                    <td>{book.userId.name}</td>
-                                    <td>{book.pickUpLocation}</td>
-                                    <td>{book.deliveryLocation}</td>
-                                    <td>
-                                        <button type="button" value={book._id} onClick={acceptOrder} className="btn btn-success" data-toggle="modal" data-target="#exampleModal">
-                                            Accept
-                                        </button>
-                                    </td>
-                                </tr>
-                                )}
+                                    // .filter(data=>data.biding.filter(element=>element.driverId==user._id).length==0)
+                                    .map((book, index) => <tr >
+                                        <td>{index + 1}</td>
+                                        <td>{book.userId.name}</td>
+                                        <td>{book.pickUpLocation}</td>
+                                        <td>{book.deliveryLocation}</td>
+                                        <td>
+                                            <button type="button" value={book._id} onClick={acceptOrder} className="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                                                Accept
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    )}
                             </tbody>
                         </table>
                         <PageNation postPerPage={postPerPage} totalPosts={booking.length} paginate={paginate} />

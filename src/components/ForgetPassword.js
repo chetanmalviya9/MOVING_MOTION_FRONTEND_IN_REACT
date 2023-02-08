@@ -24,7 +24,7 @@ export default function ForgetPassword() {
                                             <form onSubmit={forgetpassword}>
                                                 <div className="form-group">
                                                     <div className="input-group">
-                                                        <input placeholder="Enter Your Email " onChange={(e) => setEmail(e.target.value)} className="form-control" type="email" maxlength="10" required />
+                                                        <input placeholder="Enter Your Email " onChange={(e) => setEmail(e.target.value)} className="form-control" type="email"  required />
                                                     </div>
                                                 </div>
                                                 <div className='row'>

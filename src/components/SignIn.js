@@ -54,7 +54,7 @@ export default function SignIn() {
                                     className="w-100" style={{ borderTopLeftRadius: ".3rem", borderTopRightRadius: ".3rem" }}
                                     alt="Samplephoto" />
                                 <div className="card-body p-4">
-                                    <h3 className="mb-4 pb-2 pb-md-0 text-center px-md-2">Login</h3>
+                                    <h3 className="mb-4 pb-2 pb-md-0 text-center px-md-2">Sign-In</h3>
                                     <ToastContainer />
                                     <form onSubmit={signIn} className="px-md-2 col-md-8 m-auto">
                                         <div className="row mb-4">
@@ -67,9 +67,11 @@ export default function SignIn() {
                                                 <input type="password" onChange={(e) => setPassword(e.target.value)} className='form-control' />
                                             </div>
                                         </div>
-                                        <button type="submit" className="btn btn-success mb-5">Submit</button>
-                                        <Link  to="/forget-password" className="nav-link">Submit</Link>
+                                        <div className='text-center'>
+                                            <button type="submit" className="btn btn-success ">Login</button>
+                                        </div>
                                     </form>
+                                    <Link to="/forget-password" className="nav-link text-info float-right">Forget Password?</Link>
                                 </div>
                             </div>
                         </div>
