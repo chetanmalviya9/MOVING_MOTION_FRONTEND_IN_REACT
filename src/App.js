@@ -20,12 +20,15 @@ import AcceptOrder from './components/AcceptOrder';
 import History from './components/History';
 import ForgetPassword from './components/ForgetPassword';
 import Otp from './components/Otp';
+import PaymentForm from './components/Payment';
 
 export default function App() {
   return <>
     <SiteMobile />
     <Header />
+    {/* <Routes> */}
     <Routes>
+      <Route path="/payment" element={<PaymentForm />}/>
       <Route path="/attach-vehicle" element={<ProtectedRoute><AttachVehicleForm /></ProtectedRoute>} />
       <Route path="/signup" element={<SignUp />} />
       <Route path="/signin" element={<SignIn />} />

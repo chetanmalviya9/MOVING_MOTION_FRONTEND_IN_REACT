@@ -15,7 +15,6 @@ export default function SignUp() {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
-
     const signUp = async (e) => {
         e.preventDefault();
         let detail = {
@@ -40,7 +39,6 @@ export default function SignUp() {
     }
     return (
         <div>
-
             <section className="h-100 h-custom" style={{ backgroundImage: "url(/images/transport1.jpg)", backgroundSize: "cover" }}>
                 <div className="container pb-5 h-100">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -57,12 +55,10 @@ export default function SignUp() {
                                             <div className="col-md-12 mt-2">
                                                 <label>Name</label>
                                                 <input onChange={(e) => setName(e.target.value)} type="text" className='form-control' />
-
                                             </div>
                                             <div className="col-md-12 mt-2">
                                                 <label>Contact</label>
                                                 <input type="text" onChange={(e) => setContact(e.target.value)} className='form-control' />
-
                                             </div>
                                             <div className="col-md-12 mt-2">
                                                 <label>Customer type</label>
@@ -71,7 +67,6 @@ export default function SignUp() {
                                                     <option value="Customer">Customer</option>
                                                     <option value="VehicleOwner">Vehicle Owner</option>
                                                 </select>
-
                                             </div>
                                             <div className="col-md-12 mt-2">
                                                 <label>Email</label>
@@ -81,16 +76,12 @@ export default function SignUp() {
                                             <div className="col-md-12 mt-2">
                                                 <label>Password</label>
                                                 <input type="password" onChange={(e) => setPassword(e.target.value)} className='form-control' />
-
                                             </div>
-
                                         </div>
-
                                         <div className='text-center'>
                                             <button type="submit" className="btn btn-success mb-2">Sign-up</button>
                                         </div>
                                     </form>
-
                                 </div>
                             </div>
                         </div>

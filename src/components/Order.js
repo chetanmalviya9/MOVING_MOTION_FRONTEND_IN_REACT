@@ -38,9 +38,10 @@ export default function Order() {
         <div>
             <div className="container">
                 <ToastContainer />
-                {bookings && <BookingPending bookings={bookings} />}
-                <div className="row wow fadeIn">
+                {bookings && <BookingPending bookings={bookings} setBookings={setBookings} />}
+                <div className="row wow fadeIn">{console.log(bookings)}
                     {bookings ? bookings.biding.map((booking, index) => <>
+                        
                         <div className="col-md-6 col-xl-6 mt-2 mb-4">
                             <div className="card">
                                 <div className="card-body">

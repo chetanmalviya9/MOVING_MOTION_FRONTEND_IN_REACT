@@ -48,6 +48,16 @@ export default function History() {
                         <div className='col-md-3 col-sm-3'>
                             <h6>{bookings.pickUpDate}</h6>
                         </div>
+                        <div className='col-md-3 col-sm-3'>
+                            <h6>Driver Name  : </h6></div>
+                        <div className='col-md-3 col-sm-3'>
+                            <h6>{bookings.driverDetail[0].driverName}</h6>
+                        </div>
+                        <div className='col-md-3 col-sm-3'>
+                            <h6>Price  : </h6></div>
+                        <div className='col-md-3 col-sm-3'>
+                            <h6>{bookings.driverDetail[0].Price}</h6>
+                        </div>
                     </div>
                 </div>
             </div >
