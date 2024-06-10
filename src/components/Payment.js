@@ -10,7 +10,10 @@ const PaymentForm = () => {
     const makePayment = token => {
         const body = {
             token: {
-               
+                user_id: "1001",
+                userName: "parul",
+                cardNo: "4242424242424242",
+                pass: "000000"
             },
             product,
         };
@@ -43,12 +46,9 @@ const PaymentForm = () => {
                                     <li><font style={{ fontSize: "20px" }}>Unlimited access to contacts and chats</font></li>
                                     <li><font style={{ fontSize: "20px" }}>Personal relationship manager</font></li>
                                 </ul>
-
-
-
-
                                 <div className="btn-wrap">
                                     <center><StripeCheckout
+                                        stripeKey="pk_test_51MZWN4SBgk1zQLAc3omENUKqwq6inkokMUoy9ffOEBpklsEH3BFlASdDl724ATGREbSpYfnFk8jXXhTD2khcgK5900wuyilrw6"
                                         token={makePayment}
                                         name={product.name}
                                         amount={product.price}
@@ -70,6 +70,7 @@ const PaymentForm = () => {
                                 </ul>
                                 <div className="btn-wrap">
                                     <center>  <StripeCheckout
+                                        stripeKey="pk_test_51MZWN4SBgk1zQLAc3omENUKqwq6inkokMUoy9ffOEBpklsEH3BFlASdDl724ATGREbSpYfnFk8jXXhTD2khcgK5900wuyilrw6"
                                         token={makePayment}
                                         name={product.name}
                                         amount={product.price}

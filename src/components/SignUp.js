@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import WebApi from '../Services/WebApi';
 import WebService from '../Services/WebServices';
 import { ToastContainer, toast } from "react-toastify";
@@ -7,6 +7,7 @@ import { setMessage } from '../reduxconfig/UserSlice';
 import { useNavigate } from 'react-router-dom';
 
 export default function SignUp() {
+    const [nameValidation, setNameValidation] = useState("");
     const [type, setType] = useState();
     const [name, setName] = useState();
     const [contact, setContact] = useState();
@@ -14,6 +15,14 @@ export default function SignUp() {
     const [password, setPassword] = useState();
     const dispatch = useDispatch();
     const navigate = useNavigate();
+    useEffect(()=>{
+        if(name=="raju"){
+            setNameValidation("please enter right word");
+        }
+        else{
+            setNameValidation("");
+        }
+    },[name])
 
     const signUp = async (e) => {
         e.preventDefault();
@@ -55,6 +64,7 @@ export default function SignUp() {
                                             <div className="col-md-12 mt-2">
                                                 <label>Name</label>
                                                 <input onChange={(e) => setName(e.target.value)} type="text" className='form-control' />
+                                                <small>{nameValidation}</small>
                                             </div>
                                             <div className="col-md-12 mt-2">
                                                 <label>Contact</label>
